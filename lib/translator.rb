@@ -14,12 +14,23 @@ def load_library (yaml)
 end
 
 def get_japanese_emoticon (yaml, emoticon)
+<<<<<<< HEAD
   #binding.pry
     if  load_library(yaml)[:get_emoticon][emoticon]
       return load_library(yaml)[:get_emoticon][emoticon]
     else
       return "Sorry, that emoticon was not found"
    end
+=======
+  
+  load_library(yaml)[:get_emoticon].keys.each do |emoticons|
+    if emoticons == emoticon
+      #binding.pry
+      return load_library(yaml)[:get_emoticon][emoticons]
+    else
+   end
+  end
+>>>>>>> 2370f376431c4a186471a0b6916b6e118aa7df90
 end
 
 def get_english_meaning (yaml, emoticon)
